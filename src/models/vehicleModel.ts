@@ -1,4 +1,4 @@
-export class VehicleModel{
+export class Vehicle{
   constructor(private readonly name: string, private readonly model: string, private readonly year: number){
     this.name = name;
     this.model = model;
