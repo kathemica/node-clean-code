@@ -22,4 +22,9 @@ export default {
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+  verbose: true,
+  "modulePathIgnorePatterns": [
+    "<rootDir>/src/interfaces"
+  ],
 };

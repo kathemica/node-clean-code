@@ -7,7 +7,7 @@ describe('RegisterVehicle', () => {
       body: {
         // name: 'Renault',
         model: '12',
-        yeay: '1980',
+        year: '1980',
       }
     };
     const httpResponse = sut.handle(httpRequest);
@@ -21,7 +21,7 @@ describe('RegisterVehicle', () => {
       body: {
         name: 'Renault',
         // model: '12',
-        yeay: '1980',
+        year: '1980',
       }
     };
     const httpResponse = sut.handle(httpRequest);
