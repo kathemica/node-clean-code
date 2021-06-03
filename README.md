@@ -42,6 +42,18 @@ npm i -D git-commit-msg-linter
 Y eso sería todo, restaría agregar los modulos que desees para trabajar.
 
 * npm i -D typescript
+* npm install -g -D jest <-- para poderlo configurar luego
+* npm i -D ts-jest @types/jest ts-node
+
+Configuramos Jest:
+> jest --init
+
+√ Would you like to use Jest when running "test" script in "package.json"? ... yes
+√ Would you like to use Typescript for the configuration file? ... yes
+√ Choose the test environment that will be used for testing » node
+√ Do you want Jest to add coverage reports? ... yes
+√ Which provider should be used to instrument code for coverage? » babel
+√ Automatically clear mock calls and instances between every test? ... yes
 
 Comandos útiles de Git.
 * Agregar los cambios al commit: git add .
