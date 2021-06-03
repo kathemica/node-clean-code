@@ -4,7 +4,7 @@
   "description": "Uso de Clean Code, SOLID, TDD y Typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "jest -i",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest -i --coverage",
     "prepare": "husky install"
