@@ -5,6 +5,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "plugins": ["jest"],
   "parser": "@typescript-eslint/parser",
   "rules": {
     "no-console": "error",

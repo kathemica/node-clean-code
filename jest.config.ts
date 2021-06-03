@@ -12,6 +12,9 @@ export default {
   coverageProvider: 'v8',
   // The test environment that will be used for testing
   testEnvironment: 'node',
+  testEnvironmentOptions: {
+    NODE_ENV: 'test',
+  },
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
   // Automatically clear mock calls and instances between every test
