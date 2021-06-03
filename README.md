@@ -11,11 +11,11 @@ Para crear un proyecto desde cero con Husky, abrir una consola y:
 > npm init
 4. Iniciar Husky
 > npx husky-init && npm install
-5. Configurar Husky con lint-staged<br>
+5. Configurar Husky con lint-staged (Ejecutar en consola)<br>
 a. $ npm i -D lint-staged<br>
 b. $ npm set-script prepare "husky install"<br>
 c. $ npm run prepare<br>
-d. $ nnpx husky add .husky/pre-commit 'npx lint-staged'<br>
+d. $ npx husky add .husky/pre-commit 'npx lint-staged'<br>
 e. Abrir VSCode y crear el archivo **.lintstagedrc.json** en la raíz, agregar el siguiente contenido:
 ```
 {
@@ -39,6 +39,10 @@ g. Para tener un patron de desarrollo en git<br>
 ```
 npm i -D git-commit-msg-linter
 ```
+
+Para que funcione con las nuevas versiones de husky, ejecutar por consola:
+>$ npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1"
+
 Y eso sería todo, restaría agregar los modulos que desees para trabajar.
 
 * npm i -D typescript
