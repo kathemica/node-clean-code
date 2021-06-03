@@ -15,8 +15,5 @@ export class RegisterVehicle {
         body: new Error('Error in the: model')
       };
     }
-
-
-
   }
 }
