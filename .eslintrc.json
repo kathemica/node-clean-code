@@ -15,5 +15,6 @@
     "jest/expect-expect": "off",
     "@typescript-eslint/no-redeclare": "off",
     "@typescript-eslint/semi": [2, "always"]
-  }
+  },
+  "ignorePatterns": ["*.md"]
 }
