@@ -43,6 +43,16 @@ npm i -D git-commit-msg-linter
 Para que funcione con las nuevas versiones de husky, ejecutar por consola:
 >$ npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1"
 
+luego abrir *.git/hooks/commit-msg*, buscar la funcion main y reemplazar:
+
+>const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
+
+por:
+
+>const commitMsgFilePath = path.resolve(process.env.PWD, '/', process.argv[2]);
+
+Esto corrige el path para el archivo COMMIT_EDITMSG.
+
 Y eso sería todo, restaría agregar los modulos que desees para trabajar.
 
 * npm i -D typescript
