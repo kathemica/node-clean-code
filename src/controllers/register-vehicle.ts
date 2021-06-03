@@ -1,19 +1,20 @@
-import { HttpReponse, HttpRequest } from "../interfaces/httpInterface";
+import { HttpResponse, HttpRequest } from "../interfaces/httpInterface";
 
 export class RegisterVehicle {
-  handle(httpRequest: HttpRequest): HttpReponse {
-    if (!httpRequest.body.name){
-      return {
-        statusCode: 400,
-        body: new Error('Error in the: name')
-      };
-    }
+  handle(httpRequest: HttpRequest): HttpResponse {
+    const requiredProperties = ['name', 'model', 'year', 'color'];
 
-    if (!httpRequest.body.model){
-      return {
-        statusCode: 400,
-        body: new Error('Error in the: model')
-      };
-    }
+    requiredProperties.forEach(property => {
+      if (!httpRequest.body[property]){
+        return {
+          statusCode: 400,
+          body: new Error(`Error in the: ${property}`)
+        };
+      }
+    });
+    return {
+      statusCode: 200,
+      body: { httpRequest}
+    };
   }
 }

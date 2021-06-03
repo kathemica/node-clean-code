@@ -5,4 +5,5 @@ export class VehicleModelHelper {
   year: number;
   price: number;
   isAvailable: boolean;
+  color: string;
 }

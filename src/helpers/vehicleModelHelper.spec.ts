@@ -9,7 +9,8 @@ describe('Helpers', () => {
       model: '12',
       year: 1980,
       price: 45000.98,
-      isAvailable: true
+      isAvailable: true,
+      color: 'green'
     };
 
     expect(typeof vehicleModelHelper.name).toEqual('string');
@@ -17,5 +18,6 @@ describe('Helpers', () => {
     expect(typeof vehicleModelHelper.year).toBe('number');
     expect(typeof vehicleModelHelper.price).toBe('number');
     expect(typeof vehicleModelHelper.isAvailable).toBe('boolean');
+    expect(typeof vehicleModelHelper.color).toBe('string');
   });
 });
