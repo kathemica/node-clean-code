@@ -17,4 +17,9 @@ export class Food {
     return this.food.price;
   }
 
+  // manera de devolver todo el objeto
+  get wholeFood (): any{
+    return Object.assign(this, this.food);
+  }
+
 }
