@@ -14,7 +14,11 @@
     "consistent-return": "off",
     "jest/expect-expect": "off",
     "@typescript-eslint/no-redeclare": "off",
-    "@typescript-eslint/semi": [2, "always"]
+    "@typescript-eslint/semi": [2, "always"],
+    "@typescript-eslint/strict-boolean-expresions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/comma-spacing": "error",
+    "@typescript-eslint/return-await": "error"
   },
   "ignorePatterns": ["*.md"]
 }

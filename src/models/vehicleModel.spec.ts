@@ -7,7 +7,8 @@ describe('Models', () => {
       model: '12',
       year: 1980,
       price: 45000.98,
-      isAvailable: true
+      isAvailable: true,
+      color: 'green'
     };
 
     const vehicleModel = new Vehicle(vehicleObj);

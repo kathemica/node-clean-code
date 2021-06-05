@@ -1,20 +1,21 @@
+import { MissingFormalParamenter } from "../errors/clientError";
 import { HttpResponse, HttpRequest } from "../interfaces/httpInterface";
 
 export class RegisterVehicle {
-  handle(httpRequest: HttpRequest): HttpResponse {
+  handle (httpRequest: HttpRequest): HttpResponse {
     const requiredProperties = ['name', 'model', 'year', 'color'];
 
-    requiredProperties.forEach(property => {
+    for (const property of requiredProperties) {
       if (!httpRequest.body[property]){
         return {
           statusCode: 400,
-          body: new Error(`Error in the: ${property}`)
+          body: new MissingFormalParamenter(property)
         };
       }
-    });
+    }
     return {
       statusCode: 200,
-      body: { httpRequest}
+      body: 'OK'
     };
   }
 }

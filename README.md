@@ -45,11 +45,11 @@ Para que funcione con las nuevas versiones de husky, ejecutar por consola:
 
 luego abrir *.git/hooks/commit-msg*, buscar la funcion main y reemplazar:
 
->const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
+>const commitMsgFilePath = process.argv[2];
 
 por:
 
->const commitMsgFilePath = path.resolve(process.env.PWD, '/', process.argv[2]);
+>const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
 
 Esto corrige el path para el archivo COMMIT_EDITMSG.
 

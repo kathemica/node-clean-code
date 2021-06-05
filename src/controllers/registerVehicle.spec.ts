@@ -1,18 +1,33 @@
-import { RegisterVehicle } from "./register-vehicle";
+import { MissingFormalParamenter } from "../errors/clientError";
+import { RegisterVehicle } from "./registerVehicle";
 
 describe('RegisterVehicle', () => {
-  it('if not exists the name does not exists return 400 ', () => {
+  it('if it is OK must return 200 and Ok at body ', () => {
     const sut = new RegisterVehicle();
     const httpRequest = {
       body: {
-        // name: 'Renault',
+        name: 'Renault',
         model: '12',
         year: '1980',
+        color: 'green'
+      }
+    };
+    const httpResponse = sut.handle(httpRequest);
+    expect(httpResponse.statusCode).toBe(200);
+    expect(httpResponse.body).toEqual('OK');
+  });
+  it('if doest not exists the name must return 400 ', () => {
+    const sut = new RegisterVehicle();
+    const httpRequest = {
+      body: {
+        model: '12',
+        year: '1980',
+        color: 'green'
       }
     };
     const httpResponse = sut.handle(httpRequest);
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toEqual(new Error('Error in the: name'));
+    expect(httpResponse.body).toEqual(new MissingFormalParamenter('name'));
   });
 
   it('if not exists the model does not exists return 400  ', () => {
@@ -26,7 +41,7 @@ describe('RegisterVehicle', () => {
     };
     const httpResponse = sut.handle(httpRequest);
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toEqual(new Error('Error in the: model'));
+    expect(httpResponse.body).toEqual(new MissingFormalParamenter('model'));
   });
 
   it('if not exists the year does not exists return 400 ', () => {
@@ -40,7 +55,7 @@ describe('RegisterVehicle', () => {
     };
     const httpResponse = sut.handle(httpRequest);
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toEqual(new Error('Error in the: year'));
+    expect(httpResponse.body).toEqual(new MissingFormalParamenter('year'));
   });
 
   it('if not exists the color does not exists return 400 ', () => {
@@ -54,6 +69,6 @@ describe('RegisterVehicle', () => {
     };
     const httpResponse = sut.handle(httpRequest);
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toEqual(new Error('Error in the: color'));
+    expect(httpResponse.body).toEqual(new MissingFormalParamenter('color'));
   });
 });

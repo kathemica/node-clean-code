@@ -23,7 +23,7 @@ export default {
     '.+\\.ts$': 'ts-jest'
   },
   testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
-  verbose: true,
+  // verbose: false,
   "modulePathIgnorePatterns": [
     "<rootDir>/src/interfaces"
   ],
