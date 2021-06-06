@@ -19,7 +19,7 @@ export class Food {
 
   // manera de devolver todo el objeto
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  get wholeFood (): any{
+  get WholeFood (): any{
     return Object.assign(this, this.food);
   }
 

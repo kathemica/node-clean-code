@@ -11,14 +11,15 @@ describe('Protocols and Query', () => {
   });
 
   it('Login response query', () => {
-    const parsedURL = URlLogin.parseURL('http://localhost:3000/login?user=user&password=password');
-
     const expectedAuth = {
       'user': 'user',
       'password': 'password'
     };
 
-    // Object.fromEntries convierte un map object en un JSON
+    const parsedURL = URlLogin.parseURL(`http://localhost:3000/login?user=${expectedAuth['user']}&password=${expectedAuth['password']}`);
+
+
+    // Object.fromEntries convierte un map object en un objeto JS
     const parsedURLQuery = Object.fromEntries(new URLSearchParams(parsedURL.search));
 
     expect(parsedURLQuery).toEqual(expectedAuth);

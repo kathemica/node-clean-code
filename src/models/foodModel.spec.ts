@@ -11,6 +11,6 @@ describe('Models', () => {
     expect(food.Name).toEqual('Ketchup');
     expect(food.Description).toEqual('Salsa a base de tomates');
     expect(food.Price).toEqual(55.20);
-    expect(food.wholeFood).toEqual(food);
+    expect(food.WholeFood).toEqual(food);
   });
 });
