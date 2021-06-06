@@ -13,7 +13,7 @@ describe('Helpers', () => {
       color: 'green'
     };
 
-    expect(typeof vehicleModelHelper.name).toEqual('string');
+    expect(typeof vehicleModelHelper.name).toBe('string');
     expect(typeof vehicleModelHelper.model).toBe('string');
     expect(typeof vehicleModelHelper.year).toBe('number');
     expect(typeof vehicleModelHelper.price).toBe('number');
