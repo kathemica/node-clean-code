@@ -1,4 +1,4 @@
-import { ContractPrimeModel } from "./MContractPrimeModel";
+import { ContractPrimeModel } from "./MContractPrime";
 
 describe('Class ContractPrimeModel', () => {
   const contractObj= {
