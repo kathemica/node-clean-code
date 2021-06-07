@@ -1,4 +1,4 @@
-import { FoodModelHelper } from "../helpers/foodModelHelper";
+import { FoodModelHelper } from "../../helpers/foodModelHelper";
 
 export class Food {
 

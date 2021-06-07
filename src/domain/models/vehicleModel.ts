@@ -1,4 +1,4 @@
-import { VehicleModelHelper } from "../helpers/vehicleModelHelper";
+import { VehicleModelHelper } from "../../helpers/vehicleModelHelper";
 
 export class Vehicle{
   constructor(private readonly vehicle: VehicleModelHelper){ }

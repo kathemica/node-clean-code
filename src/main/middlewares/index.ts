@@ -1,2 +1,2 @@
-export * from '../middlewares/MBodyParser';
-export * from '../middlewares/MCors';
+export * from './MBodyParser.middeware';
+export * from './MCors.middeware';

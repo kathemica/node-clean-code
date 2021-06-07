@@ -1,4 +1,4 @@
-import { MissingFormalParamenter } from "../errors/MissingFormalParamenter";
+import { MissingFormalParamenter } from "../../errors/MissingFormalParamenter";
 import { RegisterVehicle } from "./registerVehicle";
 
 describe('RegisterVehicle', () => {
