@@ -103,3 +103,8 @@ dist
 # TernJS port file
 .tern-port
 /src/_tests_
+/certs/server_root_CA.crt
+/certs/https/cert.pem
+/certs/https/key.pem
+/certs/client.pem
+/certs/client.key
