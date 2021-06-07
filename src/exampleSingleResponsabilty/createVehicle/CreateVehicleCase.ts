@@ -1,5 +1,5 @@
 import { EVehicle } from "../entities/EVehicle";
-import { VehicleDataError } from "../../errors/EVehicleDataError";
+import { VehicleDataError } from "../errors/EVehicleDataError";
 import { IVehicleRepository } from "../repository/IVehicle";
 import { CreateVehicleDTO } from "./CreateVehicleDTO";
 

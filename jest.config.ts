@@ -6,6 +6,7 @@
 export default {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  coverageReporters: ['text', 'lcov', 'clover', 'html'],
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
   // Indicates which provider should be used to instrument code for coverage

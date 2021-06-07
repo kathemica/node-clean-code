@@ -69,6 +69,13 @@ Configuramos Jest:
 √ Which provider should be used to instrument code for coverage? » babel
 √ Automatically clear mock calls and instances between every test? ... yes
 
+
+Para que el servidor transpile automaticamente en tiempo de ejecución
+> npm i -D ts-node-dev
+
+Para importr automaticamente los archivos de una carpeta en otro como un indice
+> npm i fast-glob
+
 Comandos útiles de Git.
 * Agregar los cambios al commit: git add .
 * Crear el commit: git git commit -m"[comando de git-commit-msg-linter] [mensaje]"
