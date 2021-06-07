@@ -1,4 +1,4 @@
-import { InvalidArgument } from "../errors/invalidArg";
+import { InvalidArgument } from "../errors/InvalidArgument";
 import { URlLogin } from "./protocolHttp";
 
 describe('Protocols and Query', () => {

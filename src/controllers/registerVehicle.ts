@@ -1,4 +1,4 @@
-import { MissingFormalParamenter } from "../errors/clientError";
+import { MissingFormalParamenter } from "../errors/MissingFormalParamenter";
 import { HttpResponse, HttpRequest } from "../interfaces/httpInterface";
 
 export class RegisterVehicle {

@@ -25,6 +25,7 @@ export default {
   testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
   // verbose: false,
   "modulePathIgnorePatterns": [
-    "<rootDir>/src/interfaces"
+    "<rootDir>/src/interfaces",
+    "<rootDir>/src/exampleSingleResponsabilty",
   ],
 };

@@ -1,5 +1,5 @@
 import { UrlObject } from "url";
-import { InvalidArgument } from "../errors/invalidArg";
+import { InvalidArgument } from "../errors/InvalidArgument";
 import _ from 'lodash';
 
 export class URlLogin {

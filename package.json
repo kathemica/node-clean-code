@@ -4,9 +4,12 @@
   "description": "Uso de Clean Code, SOLID, TDD y Typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "jest -i",
-    "test:watch": "jest -i --watch",
-    "test:coverage": "jest -i --coverage",
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:all": "jest",
+    "test:watch": "npm test -i --watch",
+    "test:unit": "npm test -- --watch -c ./jest-unit-config.ts",
+    "test:integration": "npm test -- --watch -c ./jest-integration-config.ts",
+    "test:coverage": "npm test -- --coverage",
     "prepare": "husky install"
   },
   "repository": {
@@ -30,6 +33,7 @@
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.170",
     "@types/node": "^15.6.2",
+    "@types/validator": "^13.1.3",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "eslint": "^7.27.0",
@@ -49,6 +53,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "validator": "^13.6.0"
   }
 }
